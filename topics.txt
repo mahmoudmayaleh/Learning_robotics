@@ -1,0 +1,22 @@
+Launching Gazebo...
+Waiting 25 seconds for Gazebo to start...
+--- AVAILABLE TOPICS ---
+/camera/camera_info
+/camera/image_raw
+/camera/image_raw/compressed
+/camera/image_raw/compressedDepth
+/camera/image_raw/theora
+/camera/image_raw/zstd
+/clock
+/cmd_vel
+/imu
+/joint_states
+/odom
+/parameter_events
+/robot_description
+/rosout
+/scan
+/tf
+/tf_static
+--- END TOPICS ---
+Killing Gazebo...

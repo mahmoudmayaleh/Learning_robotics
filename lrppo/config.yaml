@@ -1,0 +1,36 @@
+# Example experiment configuration for lrppo
+
+ppo:
+  lr: 3e-4
+  gamma: 0.99
+  lam: 0.95
+  clip_eps: 0.2
+  update_epochs: 10
+  minibatch_size: 64
+  value_coef: 0.5
+  ent_coef: 0.01 # Added entropy bonus for exploration
+  max_grad_norm: 0.5
+  rollout_capacity: 1200
+
+network:
+  hidden_sizes: [64, 64]
+
+reward:
+  reward_goal: 200.0 # Increased to make goal more attractive
+  reward_collision: -10.0 # Reduced penalty to encourage exploration
+  reward_timeout: -5.0 # Reduced timeout penalty
+  progress_scale: 5.0 # Increased to reward progress more strongly
+
+training:
+  rollout_steps: 1200
+  checkpoint_dir: checkpoints
+  checkpoint_interval: 1
+  print_interval: 10 # print running averages every N episodes
+
+env:
+  maze: default_maze
+  num_beams: 48
+  lidar_max_range: 6.0
+  control_rate: 10.0
+  collision_distance: 0.45 # Increased for better safety margin
+

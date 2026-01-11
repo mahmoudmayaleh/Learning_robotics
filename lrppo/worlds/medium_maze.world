@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="medium_maze">
+    <include><uri>model://ground_plane</uri></include>
+    <include><uri>model://sun</uri></include>
+
+    <!-- Outer walls 12x12 -->
+    <model name="wall_n"><static>true</static><pose>0 6 0.25 0 0 0</pose>
+      <link name="l"><collision name="c"><geometry><box><size>12 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>12 0.1 0.5</size></box></geometry></visual></link></model>
+    <model name="wall_s"><static>true</static><pose>0 -6 0.25 0 0 0</pose>
+      <link name="l"><collision name="c"><geometry><box><size>12 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>12 0.1 0.5</size></box></geometry></visual></link></model>
+    <model name="wall_e"><static>true</static><pose>6 0 0.25 0 0 1.5708</pose>
+      <link name="l"><collision name="c"><geometry><box><size>12 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>12 0.1 0.5</size></box></geometry></visual></link></model>
+    <model name="wall_w"><static>true</static><pose>-6 0 0.25 0 0 1.5708</pose>
+      <link name="l"><collision name="c"><geometry><box><size>12 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>12 0.1 0.5</size></box></geometry></visual></link></model>
+
+    <!-- Internal walls forming corridors -->
+    <model name="iw1"><static>true</static><pose>-3 0 0.25 0 0 0</pose>
+      <link name="l"><collision name="c"><geometry><box><size>4 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>4 0.1 0.5</size></box></geometry></visual></link></model>
+    <model name="iw2"><static>true</static><pose>0 3 0.25 0 0 1.5708</pose>
+      <link name="l"><collision name="c"><geometry><box><size>4 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>4 0.1 0.5</size></box></geometry></visual></link></model>
+    <model name="iw3"><static>true</static><pose>3 -2 0.25 0 0 0</pose>
+      <link name="l"><collision name="c"><geometry><box><size>3 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>3 0.1 0.5</size></box></geometry></visual></link></model>
+    <model name="iw4"><static>true</static><pose>-2 -3 0.25 0 0 1.5708</pose>
+      <link name="l"><collision name="c"><geometry><box><size>3 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>3 0.1 0.5</size></box></geometry></visual></link></model>
+    <model name="iw5"><static>true</static><pose>2 2 0.25 0 0 0.7854</pose>
+      <link name="l"><collision name="c"><geometry><box><size>2 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>2 0.1 0.5</size></box></geometry></visual></link></model>
+
+    <!-- Pillars -->
+    <model name="p1"><static>true</static><pose>-4 3 0.25 0 0 0</pose>
+      <link name="l"><collision name="c"><geometry><cylinder><radius>0.2</radius><length>0.5</length></cylinder></geometry></collision>
+      <visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.5</length></cylinder></geometry></visual></link></model>
+    <model name="p2"><static>true</static><pose>4 -4 0.25 0 0 0</pose>
+      <link name="l"><collision name="c"><geometry><cylinder><radius>0.2</radius><length>0.5</length></cylinder></geometry></collision>
+      <visual name="v"><geometry><cylinder><radius>0.2</radius><length>0.5</length></cylinder></geometry></visual></link></model>
+
+    <model name="goal"><static>true</static><pose>4 4 0.01 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><cylinder><radius>0.3</radius><length>0.02</length></cylinder></geometry>
+      <material><ambient>0 1 0 1</ambient><diffuse>0 1 0 1</diffuse></material></visual></link></model>
+  </world>
+</sdf>

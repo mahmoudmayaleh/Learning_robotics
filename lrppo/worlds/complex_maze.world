@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="complex_maze">
+    <include><uri>model://ground_plane</uri></include>
+    <include><uri>model://sun</uri></include>
+
+    <!-- Outer walls 14x14 -->
+    <model name="wn"><static>true</static><pose>0 7 0.25 0 0 0</pose>
+      <link name="l"><collision name="c"><geometry><box><size>14 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>14 0.1 0.5</size></box></geometry></visual></link></model>
+    <model name="ws"><static>true</static><pose>0 -7 0.25 0 0 0</pose>
+      <link name="l"><collision name="c"><geometry><box><size>14 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>14 0.1 0.5</size></box></geometry></visual></link></model>
+    <model name="we"><static>true</static><pose>7 0 0.25 0 0 1.5708</pose>
+      <link name="l"><collision name="c"><geometry><box><size>14 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>14 0.1 0.5</size></box></geometry></visual></link></model>
+    <model name="ww"><static>true</static><pose>-7 0 0.25 0 0 1.5708</pose>
+      <link name="l"><collision name="c"><geometry><box><size>14 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>14 0.1 0.5</size></box></geometry></visual></link></model>
+
+    <!-- Dense internal maze walls -->
+    <model name="m1"><static>true</static><pose>-4 5 0.25 0 0 0</pose>
+      <link name="l"><collision name="c"><geometry><box><size>4 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>4 0.1 0.5</size></box></geometry></visual></link></model>
+    <model name="m2"><static>true</static><pose>2 5 0.25 0 0 0</pose>
+      <link name="l"><collision name="c"><geometry><box><size>3 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>3 0.1 0.5</size></box></geometry></visual></link></model>
+    <model name="m3"><static>true</static><pose>-5 2 0.25 0 0 1.5708</pose>
+      <link name="l"><collision name="c"><geometry><box><size>5 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>5 0.1 0.5</size></box></geometry></visual></link></model>
+    <model name="m4"><static>true</static><pose>-2 3 0.25 0 0 0</pose>
+      <link name="l"><collision name="c"><geometry><box><size>3 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>3 0.1 0.5</size></box></geometry></visual></link></model>
+    <model name="m5"><static>true</static><pose>2.5 0 0.25 0 0 1.5708</pose>
+      <link name="l"><collision name="c"><geometry><box><size>6 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>6 0.1 0.5</size></box></geometry></visual></link></model>
+    <model name="m6"><static>true</static><pose>3 1 0.25 0 0 0</pose>
+      <link name="l"><collision name="c"><geometry><box><size>4 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>4 0.1 0.5</size></box></geometry></visual></link></model>
+    <model name="m7"><static>true</static><pose>5 -2 0.25 0 0 1.5708</pose>
+      <link name="l"><collision name="c"><geometry><box><size>4 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>4 0.1 0.5</size></box></geometry></visual></link></model>
+    <model name="m8"><static>true</static><pose>-3 -2 0.25 0 0 0</pose>
+      <link name="l"><collision name="c"><geometry><box><size>3 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>3 0.1 0.5</size></box></geometry></visual></link></model>
+    <model name="m9"><static>true</static><pose>2 -3 0.25 0 0 1.5708</pose>
+      <link name="l"><collision name="c"><geometry><box><size>3 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>3 0.1 0.5</size></box></geometry></visual></link></model>
+    <model name="m10"><static>true</static><pose>-2 -5 0.25 0 0 0</pose>
+      <link name="l"><collision name="c"><geometry><box><size>5 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>5 0.1 0.5</size></box></geometry></visual></link></model>
+    <model name="m11"><static>true</static><pose>4 -5 0.25 0 0 0</pose>
+      <link name="l"><collision name="c"><geometry><box><size>2 0.1 0.5</size></box></geometry></collision>
+      <visual name="v"><geometry><box><size>2 0.1 0.5</size></box></geometry></visual></link></model>
+
+    <!-- Scattered pillars -->
+    <model name="p1"><static>true</static><pose>-4 -3 0.25 0 0 0</pose>
+      <link name="l"><collision name="c"><geometry><cylinder><radius>0.25</radius><length>0.5</length></cylinder></geometry></collision>
+      <visual name="v"><geometry><cylinder><radius>0.25</radius><length>0.5</length></cylinder></geometry></visual></link></model>
+    <model name="p2"><static>true</static><pose>1 4 0.25 0 0 0</pose>
+      <link name="l"><collision name="c"><geometry><cylinder><radius>0.25</radius><length>0.5</length></cylinder></geometry></collision>
+      <visual name="v"><geometry><cylinder><radius>0.25</radius><length>0.5</length></cylinder></geometry></visual></link></model>
+    <model name="p3"><static>true</static><pose>5 3 0.25 0 0 0</pose>
+      <link name="l"><collision name="c"><geometry><cylinder><radius>0.25</radius><length>0.5</length></cylinder></geometry></collision>
+      <visual name="v"><geometry><cylinder><radius>0.25</radius><length>0.5</length></cylinder></geometry></visual></link></model>
+
+    <model name="goal"><static>true</static><pose>5 5 0.01 0 0 0</pose>
+      <link name="l"><visual name="v"><geometry><cylinder><radius>0.3</radius><length>0.02</length></cylinder></geometry>
+      <material><ambient>0 1 0 1</ambient><diffuse>0 1 0 1</diffuse></material></visual></link></model>
+  </world>
+</sdf>
